@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Инвестиционный проект: Apartmajska hiša Mojstrana – Туристические апартаменты в Словении</title>
+  <meta name="description" content="Обновленный инвестиционный проект для земельного участка в Мойстране, Словения. Детальное описание участка, финансовые расчеты по продаже 3 апартаментов, современные фото и описание достопримечательностей.">
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f5f7fa;
+      color: #1a202c;
+      line-height: 1.7;
+    }
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s cubic-bezier(.42,0,.58,1), transform 1s cubic-bezier(.42,0,.58,1);
+    }
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: none;
+    }
+    .chart-container {
+      width: 100%;
+      max-width: 730px;
+      margin-top: 24px;
+    }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .photo-grid img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 0.75rem;
+      background: #f7fafc;
+    }
+    @media (max-width: 640px) {
+      .photo-grid { grid-template-columns: 1fr; }
+      .photo-grid img { min-height: 180px; }
+    }
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body>
+<div class="max-w-5xl mx-auto bg-white rounded-xl shadow-lg mt-5 mb-7 p-4 sm:p-8 md:p-12 transition">
+  <!-- HEADER -->
+  <section class="mb-10 fade-in-up">
+    <div class="flex items-center justify-between flex-wrap">
+      <div>
+        <h1 class="text-3xl md:text-4xl font-bold mb-2 text-blue-900">Инвестиционный проект:</h1>
+        <h2 class="text-xl md:text-2xl font-semibold mb-3">Apartmajska hiša Mojstrana<br><span class="text-teal-700">Туристические апартаменты, Мойстрана, Словения</span></h2>
+        <div class="text-base md:text-xl text-gray-700 mb-2">Премиальное предложение — строительство туристического жилья в самом сердце Юлийских Альп, на границе Триглавского национального парка!</div>
+        <div class="font-medium text-teal-900"><i class="fas fa-euro-sign text-green-600"></i> Цена участка: <span class="font-bold text-xl text-green-700">135 000 €</span></div>
+      </div>
+     <div>
+          <div class="rounded-lg bg-teal-100 px-5 py-3 font-bold text-sm md:text-base flex flex-col gap-1">
+            <span>Регион: <span class="text-blue-800">Gorenjska / Краньска Гора</span></span>
+            <span><i class="fas fa-building text-blue-700"></i> Категория: Строительный участок (512 м²) с долей на подъездную дорогу</span>
+            <span><i class="fas fa-user-tie text-blue-700"></i> Инвестпотенциал: аренда и/или продажа 3 апартаментов</span>
+          </div>
+      </div>
+    </div>
+    <div class="photo-grid mt-8">
+      <img src="https://raw.githubusercontent.com/miragconsulting/Images/main/mojstrana5.jpg" alt="Вид на участок в Мойстране">
+      <img src="https://raw.githubusercontent.com/miragconsulting/Images/main/mojstrana2.jpg" alt="Соседние дома и участок">
+      <img src="https://raw.githubusercontent.com/miragconsulting/Images/main/mojstrana3.jpg" alt="Перспектива на деревню с участком">
+      <img src="https://raw.githubusercontent.com/miragconsulting/Images/main/mojstrana4.jpg" alt="Въезд к участку, Мойстрана">
+    </div>
+  </section>
+
+  <!-- ОПИСАНИЕ УЧАСТКА -->
+  <section class="mb-16 fade-in-up">
+    <h3 class="text-2xl font-bold mb-5 text-blue-800"><i class="fas fa-map-marker-alt text-blue-500 mr-2"></i> Описание участка и ключевые параметры</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
+      <div>
+        <p class="mb-2"><b>Местоположение:</b> Село Мойстрана, склон солнечной стороны деревни. <b>Площадь:</b> 535 м² (участок №1: ~512 м² + 1/2 общей подъездной дороги 46 м²). Категория — полностью пригоден для застройки.</p>
+        <p class="mb-2">Мойстрана — исторически связанное с альпинизмом место, расположено на стыке трех альпийских долин (Krma, Kot, Vrata) и является настоящими воротами в Триглавский национальный парк.</p>
+        <p class="mb-2">До автомагистрали и г. Есенице всего 4 км — быстрое сообщение с инфраструктурным центром (школы, банки, супермаркеты). До культового курорта Краньска Гора ~13-14 км, до ближайших горнолыжных подъемников — 10 минут на машине.</p>
+        <p class="mb-2"><b>Инфраструктура:</b> Все городские коммуникации (вода, канализация, газ) подведены, абсолютно новые линии проведены при недавней реконструкции дороги.</p>
+        <p class="mb-2">Участок полностью готов для строительства, отвечает всем современным нормативам. Индекс застройки до 0,3 (максимальная застроенная площадь ~155 м²), разрешены дома до 3 квартир в одном объекте. Паркинг — по 2 места на каждую квартиру.</p>
+        <p class="mb-2">Допускается устройство цокольного этажа с увеличенной площадью, тип кровли — двускатная с уклоном 35-45°, не выше окружающих домов, максимум 2 надземных этажа + мансарда. Минимальная доля зеленых насаждений — 50% участка.</p>
+        <ul class="list-disc ml-5 mt-2 mb-2 text-sm text-gray-700">
+          <li>Площадь участка: 535 м² (застройка ~155 м² по индексу 0,3)</li>
+          <li>Инженерные сети: <span class="text-green-800 font-semibold">все подведены</span></li>
+          <li>Потенциал: до 3 апартаментов (каждый с 2 паркоместами)</li>
+          <li>Класс экологии: граница охраняемого парка, свежайший альпийский воздух</li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- РАЗДЕЛ: ОБЩИЙ ФИНПЛАН И ОПТИМАЛЬНАЯ ЗАСТРОЙКА -->
+    <section class="mb-14 fade-in-up">
+      <h3 class="text-2xl font-bold mb-5 text-green-800"><i class="fas fa-calculator text-green-600 mr-2"></i> Финансовый расчет — продажа апартаментов</h3>
+
+      <div class="bg-gray-50 rounded-lg p-6 shadow-md mb-7">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h4 class="font-semibold text-md text-green-900 mb-2">Структура затрат (на весь проект):</h4>
+            <ul class="text-sm pl-6 mb-3 list-[circle]">
+              <li>• Участок с инфраструктурой: <b>133 750 €</b></li>
+              <li>• Проектные работы и юр. сопровождение: <b>12 000 €</b></li>
+              <li>• Общая площадь строительства: <b>~210 м²</b> (3 апартамента по 70 м²)</li>
+              <li>• Строительство (1300 €/м²): <b>273 000 €</b></li>
+              <li>• Получение разрешений, коммунальные сборы (200 €/м²): <b>42 000 €</b></li>
+              <li>• Меблировка, благоустройство, маркетинг: <b>24 000 €</b></li>
+              <li class="mt-2"><b>ИТОГО инвестиций: <span class="text-xl text-green-800">484 750 €</span></b></li>
+            </ul>
+            <h4 class="font-semibold text-md text-green-900 mt-6 mb-2">Ожидаемая продажная стоимость:</h4>
+            <ul class="text-sm pl-6">
+              <li>• 3 апартамента по цене <b>не менее 200 000 €</b> каждый</li>
+              <li>• Совокупная выручка: <b class="text-green-800 text-lg">600 000 €</b></li>
+            </ul>
+          </div>
+          <div class="chart-container">
+            <canvas id="roi-chart" width="340" height="170"></canvas>
+          </div>
+        </div>
+        <div class="mt-6 text-gray-600 text-sm italic"><i class="fas fa-info-circle"></i> Потенциальная маржа: <b>~115 000 €</b> (23% на проект) до налогов и комиссий. Высокая окупаемость и привлекательность для инвесторов на фоне постоянно растущего спроса в регионе.</div>
+      </div>
+      <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            var ctx = document.getElementById('roi-chart').getContext('2d');
+            var data = {
+              labels: ['Инвестиции', 'Продажа'],
+              datasets: [{
+                label: 'Финансы проекта (€)',
+                data: [484750, 600000],
+                backgroundColor: ['#e2e8f0','#10b981'],
+                borderColor: ['#e2e8f0','#10b981'],
+                borderWidth: 2,
+                borderRadius: 7,
+                datalabels: { anchor: 'end', align: 'top'}
+              }]
+            };
+            var options = {
+              responsive: false,
+              plugins: {
+                legend: { display: false },
+                tooltip: { enabled: true }
+              },
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  min: 0,
+                  max: 650000,
+                  ticks: { callback: v => v.toLocaleString('ru-RU') + ' €', stepSize: 100000 }
+                }
+              }
+            };
+            new Chart(ctx, {type: 'bar', data, options});
+          });
+      </script>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-7">
+        <div class="rounded-lg bg-white border p-4 flex flex-col">
+          <span class="font-semibold text-teal-700"><i class="fas fa-bed text-teal-500 mr-1"></i> Формат 1</span>
+          <span>3 апартамента по 70 м², каждый с отдельным входом и мини-участком/террасой</span>
+          <span class="text-gray-600 mt-2 text-xs">Рекомендовано для максимальной стоимости при перепродаже</span>
+        </div>
+        <div class="rounded-lg bg-white border p-4 flex flex-col">
+          <span class="font-semibold text-teal-700"><i class="fas fa-users text-teal-500 mr-1"></i> Аренда группам/семьям</span>
+          <span>Альтернатива: сдача в аренду высокими тарифами — среднегодовая загрузка 55-60% позволяет выйти на ROI в 7 лет</span>
+          <span class="text-gray-600 mt-2 text-xs">Посуточные ставки: 120–150 €/апартамент/ночь в сезон</span>
+        </div>
+        <div class="rounded-lg bg-white border p-4 flex flex-col">
+          <span class="font-semibold text-teal-700"><i class="fas fa-arrow-trend-up text-teal-500 mr-1"></i> Реинвестирование</span>
+          <span>Данный формат — стартовая площадка для работы со смежными инвестиционными проектами в Словении</span>
+          <span class="text-gray-600 mt-2 text-xs">Участие в растущем рынке Альпийской недвижимости</span>
+        </div>
+      </div>
+      </section>
+    
+    <!-- БИЗНЕС-ПЛАН -->
+    <section class="mb-14 fade-in-up">
+      <h3 class="text-2xl font-bold mb-5 text-teal-800"><i class="fas fa-chart-line text-teal-600 mr-2"></i> Краткий бизнес-план и анализ риска</h3>
+      <div class="bg-white rounded-lg shadow-md p-6">
+        <h4 class="font-semibold mb-2 text-md text-teal-900">Маркетинг и сбыт:</h4>
+        <ul class="text-sm list-disc pl-6 mb-4">
+          <li>Позиционирование: “Клубные апартаменты — доступ к Альпам и национальному парку с единовременной возможностью покупки недвижимости класса second home / инвестиция”</li>
+          <li>Онлайн-продвижение: соцсети, платформы недвижимости ЕС, локальное агентское продвижение</li>
+          <li>Востребованность как среди словенцев, так и иностранных граждан и компаний (через открытие DOO или ИП)</li>
+        </ul>
+        <h4 class="font-semibold mb-2 text-md text-teal-900">Основные риски:</h4>
+        <ul class="text-sm list-disc pl-6 mb-4">
+          <li>Рост издержек стройки — <b>минимизируется</b> фиксированием сметы и работ с локальными подрядчиками</li>
+          <li>Ограничения по проекту и архитектуре — <b>работать строго в рамках действующего градостроительного регламента</b></li>
+          <li>Конкуренция — <b>невелика</b> в Мойстране, спрос в Краньска Гора и окрестностях стабильно высок</li>
+        </ul>
+        <div class="md:flex md:gap-7">
+          <div class="flex-1">
+            <h4 class="font-semibold mb-2 text-md text-teal-900">Финансовые показатели и стратегия:</h4>
+            <table class="w-full text-sm table-auto border mb-2">
+              <thead>
+                <tr class="text-teal-800 bg-teal-50">
+                  <th class="p-2 border">Показатель</th>
+                  <th class="p-2 border">Значение</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="p-2 border">ROI (до налогов)</td><td class="p-2 border font-semibold">~23%</td></tr>
+                <tr><td class="p-2 border">Сроки реализации проекта</td><td class="p-2 border">18–22 мес.</td></tr>
+                <tr><td class="p-2 border">Возможная окупаемость при сдаче в аренду (альтернатива)</td><td class="p-2 border">≈7 лет</td></tr>
+                <tr><td class="p-2 border">Рост средней цены недвижимости (прогноз по региону)</td><td class="p-2 border">+5–7%/год</td></tr>
+                <tr><td class="p-2 border">Средняя продажная цена апартамента (по рынку)</td><td class="p-2 border">200–250 тыс. €</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+  <!-- ТУРИЗМ И ДОСТОПРИМЕЧАТЕЛЬНОСТИ -->
+  <section id="tourism" class="mb-16 fade-in-up">
+    <h3 class="text-2xl font-bold mb-5 text-purple-800"><i class="fas fa-mountain text-purple-600 mr-2"></i> Туризм, рекреация и достопримечательности региона</h3>
+    <div class="mt-3 mb-7 text-base">
+      <p>Мойстрана — “ключ” ко всему северу Словении: вход в Триглавский национальный парк (Юлийские Альпы), туристический и спортивный центр региона Горенска. Привлекает туристов со всего мира как отправная точка горных походов, лыжного, экологического, семейного отдыха.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6 mb-4">
+      <div class="bg-white border rounded-lg p-3 shadow flex flex-col">
+        <img src="https://raw.githubusercontent.com/miragconsulting/Images/main/mojstrana.jpg" alt="Панорама Мойстраны, Альпы" class="rounded-lg mb-2 object-cover w-full h-52">
+        <h4 class="font-bold text-lg mb-1 mt-auto">Вид с окрестностей Мойстраны</h4>
+        <p class="text-sm">Вид на долину Vrata и центральную часть села в обрамлении Юлийских Альп, идеальное место для террас будущих апартаментов.</p>
+      </div>
+      <div class="bg-white border rounded-lg p-3 shadow flex flex-col">
+        <img src="https://raw.githubusercontent.com/miragconsulting/Images/main/perichnik.jpg" alt="Водопад Перичник" class="rounded-lg mb-2 object-cover w-full h-52">
+        <h4 class="font-bold text-lg mb-1 mt-auto">Водопад Перичник</h4>
+        <p class="text-sm">Один из самых эффектных водопадов Словении (два каскада, до 52 м), всего 5 минут на авто! Доступ по живописной пешей тропе прямо из села.</p>
+      </div>
+      <div class="bg-white border rounded-lg p-3 shadow flex flex-col">
+        <img src="https://raw.githubusercontent.com/miragconsulting/Images/main/dolinavrata.jpeg" alt="Долина Vrata / Ледник Триглав" class="rounded-lg mb-2 object-cover w-full h-52">
+        <h4 class="font-bold text-lg mb-1 mt-auto">Долина Vrata и Триглавский ледник</h4>
+        <p class="text-sm">Знаменитая ледниковая долина, отсюда стартует восхождение на Триглав — место силы для словенцев и иностранных туристов, отличные хайкинг-маршруты.</p>
+      </div>
+      <div class="bg-white border rounded-lg p-3 shadow flex flex-col">
+        <img src="https://raw.githubusercontent.com/miragconsulting/Images/main/kranjskaletom.jpg" alt="Краньска Гора летом" class="rounded-lg mb-2 object-cover w-full h-52">
+        <h4 class="font-bold text-lg mb-1 mt-auto">Горнолыжный курорт Краньска Гора</h4>
+        <p class="text-sm">Один из самых узнаваемых курортов Европы всего в 13 км: зимой — лыжи и сноуборд, летом — велосипед, экотуризм, семейный отдых.</p>
+      </div>
+      <div class="bg-white border rounded-lg p-3 shadow flex flex-col">
+        <img src="https://raw.githubusercontent.com/miragconsulting/Images/main/nordijska.jpg" alt="Зимний спорт и природа" class="rounded-lg mb-2 object-cover w-full h-52">
+        <h4 class="font-bold text-lg mb-1 mt-auto">Лыжные трассы, беговые маршруты</h4>
+        <p class="text-sm">40 км подготовленных трасс (Краньска Гора + Мойстрана). Отличные условия для всей семьи — профессиональные соревнования и любительский спорт.</p>
+      </div>
+      <div class="bg-white border rounded-lg p-3 shadow flex flex-col">
+        <img src="https://raw.githubusercontent.com/miragconsulting/Images/main/autumnalpes.jpg" alt="Осень в Альпах" class="rounded-lg mb-2 object-cover w-full h-52">
+        <h4 class="font-bold text-lg mb-1 mt-auto">Природа, фото-туризм и гастрономия</h4>
+        <p class="text-sm">Регион славится кристально чистым воздухом, разнообразием троп, красивейшими видами на восходе и закате, а также обилием ресторанов домашней кухни.</p>
+      </div>
+    </div>
+    <div class="mt-7 text-sm text-gray-600">
+      <i class="fas fa-chart-bar text-blue-500"></i>
+      В 2023 году Словения приняла рекордные 6,6 млн туристов и 16,9 млн ночёвок. Регион Горенска (Краньска Гора, Мойстрана) обеспечивает постоянный поток туристов круглый год. Средняя загрузка частных апартаментов — 70-85% высокий сезон, 40-60% межсезонье. Ожидаемый ежегодный рост туризма в регионе — 7-10%!
+    </div>
+  </section>
+
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Анимация появления при прокрутке
+  function onEntry(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }
+  const observer = new IntersectionObserver(onEntry, {threshold: 0.17});
+  document.querySelectorAll('.fade-in-up').forEach(e=>observer.observe(e));
+</script>
+</body>
+</html>
